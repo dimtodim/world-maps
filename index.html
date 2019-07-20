@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/d9ace798f6.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Rest world</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Where in the world?</h1>
+            <div class="toggle">
+                <label for='switch'>
+                    <div class="icon-box">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <input type="checkbox" id="switch" name="theme">
+                    <span id="mode">Dark Mode</span> 
+                </label>
+            </div>
+        </header>
+        <div class="world-container">
+                
+                <div class="search_bar">
+                <div class="search_countries">
+                        <input type="text" id="filterInput" placeholder="Search by country..">
+                </div>
+                <div class="select_countries">
+                <select name="region" id="countries">
+                        <option value="none" selected disabled hidden>Filter by Region</option> 
+                        <option value="all">All</option>
+                        <option value="africa">Africa</option>
+                        <option value="america">America</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceania">Oceania</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="cards-container">
+    <!--
+                <div id="display-card">
+                    <div id="flag-container">
+                        <img src="" alt="">
+                    </div>
+                    <div id="info-container">
+                        <h2><span id="country_name"></span></h2>
+                        <p>Population: <span id="population"></span></p>
+                        <p>Region: <span id="region"></span></p>
+                        <p>Capital: <span id="capital"></span></p>
+                    </div>
+                </div>
+    --> 
+            </div>
+
+        </div>
+    </div>
+    <script src="src/js/java.js"></script>
+    <script src="src/js/checker.js"></script>
+</body>
+</html>

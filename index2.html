@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Info Page</title>
+    <script src="https://kit.fontawesome.com/d9ace798f6.js"></script>
+    <link rel="stylesheet" href="src/css/style2.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div class="container">
+            <header>
+                    <h1>Where in the world?</h1>
+                    <div class="toggle">
+                        <label for='switch'>
+                            <div class="icon-box">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <input type="checkbox" id="switch" name="theme">
+                            <span id="mode">Dark Mode</span> 
+                        </label>
+                    </div>
+                </header>
+    <button id="back"><a href="index.html"><span><i class="fas fa-arrow-left"></i></span><span>Back</span></a></button>
+
+    <div class="state-container">
+        <div id="flag-state">
+        <img src="" alt="" id="flag">
+        </div>
+        <div id="info-state">
+            <h1 id="nameOfState"></h1>
+            <div id="main-section">
+                    <div id="partOne">
+                            <p>Native Name: <span id="nativeName"></span></p>
+                            <p>Population: <span id="population"></span></p>
+                            <p>Region: <span id="region"></span></p>
+                            <p>Sub Region: <span id="subregion"></span></p>
+                            <p>Capital: <span id="capital"></span></p>
+                        </div>
+                        <div id="partTwo">
+                            <p>Top Levele Domain: <span id="levelDomain"></span></p>
+                            <p>Currencies: <span id="currencies"></span></p>
+                            <p>Languages: <span id="langs"></span></p>
+                        </div>
+            </div>
+            <div id="partThree">
+                <p>Border Countries: <span id="borders"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="src/js/java2.js"></script>
+    <script src="src/js/checker.js"></script>
+</body>
+</html>
