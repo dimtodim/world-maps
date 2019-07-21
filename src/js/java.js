@@ -283,7 +283,7 @@ fetch("https://restcountries.eu/rest/v2/all")
         document.getElementById("switch").checked = checked;
         let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
         console.log("load je: "+saveDataTheme_deserialized);
-        document.documentElement.setAttribute('data-theme', saveDataTheme_deserialized;
+        document.documentElement.setAttribute('data-theme', saveDataTheme_deserialized);
         if  (saveDataTheme_deserialized === 'dark') {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
