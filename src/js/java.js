@@ -282,9 +282,9 @@ fetch("https://restcountries.eu/rest/v2/all")
         var checked = JSON.parse(localStorage.getItem('switch'));
         document.getElementById("switch").checked = checked;
         let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
-        console.log("load je: "+saveDataTheme_deserialized.theme);
-        document.documentElement.setAttribute('data-theme', saveDataTheme_deserialized.theme);
-        if  (saveDataTheme_deserialized.theme === 'dark') {
+        console.log("load je: "+saveDataTheme_deserialized);
+        document.documentElement.setAttribute('data-theme', saveDataTheme_deserialized;
+        if  (saveDataTheme_deserialized === 'dark') {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
             mode.innerHTML = 'Light Mode';
