@@ -241,22 +241,23 @@ fetch("https://restcountries.eu/rest/v2/all")
 
     }
     
-        let dataTheme = this.document.querySelectorAll('html');
-        function saveTheme(dataTheme) {
+    let dataTheme = this.document.querySelectorAll('html');
+
+    function saveTheme(dataTheme) {
             dataTheme.forEach(function(dataTheme){
 
                 let saveDataTheme = {
                     theme: dataTheme.getAttribute('data-theme')
                 }
 
-                console.log("save theme: "+saveDataTheme.theme);
-
-                let saveDataTheme_serialized = JSON.stringify(saveDataTheme);
+                let saveDataTheme_serialized = JSON.stringify(saveDataTheme.theme);
                 localStorage.setItem("saveDataTheme", saveDataTheme_serialized);
             })
     
-        }
+    }
 
+    let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
+    let tema = saveDataTheme_deserialized;
 
     clickMe.forEach(function(hereWeGo, index) {
         
@@ -281,10 +282,9 @@ fetch("https://restcountries.eu/rest/v2/all")
     function load(){    
         var checked = JSON.parse(localStorage.getItem('switch'));
         document.getElementById("switch").checked = checked;
-        let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
-        console.log("load je: "+saveDataTheme_deserialized);
-        document.documentElement.setAttribute('data-theme', saveDataTheme_deserialized);
-        if  (saveDataTheme_deserialized === 'dark') {
+        console.log("load je: "+tema);
+        document.documentElement.setAttribute('data-theme', tema);
+        if  (tema === 'dark') {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
             mode.innerHTML = 'Light Mode';
@@ -304,23 +304,27 @@ fetch("https://restcountries.eu/rest/v2/all")
     load();
 
     checker.addEventListener('change', function(){
-    
+                
             if  (this.checked) {
+                
                 document.documentElement.setAttribute('data-theme', 'dark');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
                 mode.innerHTML = 'Light Mode';
                 save();
+                saveTheme(dataTheme);
             } else {
+
                 document.documentElement.setAttribute('data-theme', 'light');
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
                 mode.innerHTML = 'Dark Mode';
                 save();
+                saveTheme(dataTheme);
             } 
             
         })
 
-        saveTheme(dataTheme);
+        
 });
         
