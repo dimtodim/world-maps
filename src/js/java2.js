@@ -8,7 +8,7 @@ let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"
 window.addEventListener('load', function () {
 
     //write date
-    document.documentElement.setAttribute('data-theme',saveDataTheme_deserialized.theme);
+    document.documentElement.setAttribute('data-theme',saveDataTheme_deserialized);
 
     document.getElementById("flag").src = saveDateObject_deserialized.flag;
     document.getElementById("nameOfState").innerHTML = saveDateObject_deserialized.name;
